@@ -13,7 +13,7 @@ int yylex(void);
 %%
 
 S:
- 	S O '\n' { printf("VALIDO\n"); }
+ 	S O { printf("VALIDO\n"); }
  	|
 	;
 
@@ -22,12 +22,12 @@ O:
 	;
 	
 C:
-	C '\n' {} 
+	'"' STR '"' ':' O {}
+	| '"' STR '"' ':' L {}
 	| C ',' C {}
 	| '"' STR '"' ':' INT {}
 	| '"' STR '"' ':' FLOAT {}
 	| '"' STR '"' ':' '"' STR '"' {}
-	| '"' STR '"' ':' L {}
 	|
 	;
 L:

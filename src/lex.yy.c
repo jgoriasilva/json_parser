@@ -363,8 +363,8 @@ struct yy_trans_info
 	};
 static const flex_int16_t yy_accept[20] =
     {   0,
-        0,    0,   14,   12,   11,    7,    6,   10,    5,    8,
-        3,    4,    1,    2,    0,   10,    8,    9,    0
+        0,    0,   14,   12,    1,    8,    7,   11,    6,    9,
+        4,    5,    2,    3,    0,   11,    9,   10,    0
     } ;
 
 static const YY_CHAR yy_ec[256] =
@@ -401,7 +401,7 @@ static const YY_CHAR yy_ec[256] =
 
 static const YY_CHAR yy_meta[14] =
     {   0,
-        1,    1,    2,    1,    1,    1,    1,    1,    2,    1,
+        1,    1,    2,    1,    1,    1,    2,    1,    2,    1,
         1,    1,    1
     } ;
 
@@ -736,60 +736,60 @@ do_action:	/* This label is used only to access EOF actions. */
 			goto yy_find_action;
 
 case 1:
+/* rule 1 can match eol */
 YY_RULE_SETUP
 #line 17 "src/main.l"
-{ return '{'; }
+{}
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 18 "src/main.l"
-{ return '}'; }
+{ return '{'; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 19 "src/main.l"
-{ return '['; }
+{ return '}'; }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 20 "src/main.l"
-{ return ']'; }
+{ return '['; }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 21 "src/main.l"
-{ return ':'; }
+{ return ']'; }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 22 "src/main.l"
-{ return ','; }
+{ return ':'; }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 23 "src/main.l"
-{ return '"'; }
+{ return ','; }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 24 "src/main.l"
-{ return STR; }
+{ return '"'; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 25 "src/main.l"
-{ return FLOAT; }
+{ return STR; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 26 "src/main.l"
-{ return INT; }
+{ return FLOAT; }
 	YY_BREAK
 case 11:
-/* rule 11 can match eol */
 YY_RULE_SETUP
 #line 27 "src/main.l"
-{ return '\n'; }
+{ return INT; }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
