@@ -8,13 +8,14 @@ void yyerror(char *);
 %}
 
 /*
-%token '{' '}' '[' ']' ':' ',' '"' STR INT FLOAT '\n'
+%token '{' '}' '[' ']' ':' ',' '"' STR INT FLOAT
 */
 
 
 %%
 
 [\n] {}
+[\t] {}
 \{ { return '{'; }
 \} { return '}'; }
 \[ { return '['; }
@@ -22,7 +23,7 @@ void yyerror(char *);
 \: { return ':'; }
 \, { return ','; }
 \" { return '"'; }
-[a-zA-Z][a-zA-Z0-9 ]* { return STR; }
+[a-zA-Z][a-zA-Z0-9 :\.\-\,]* { return STR; }
 [0-9]+\.[0-9]+ { return FLOAT; }
 [0-9]+ { return INT; }
 . 

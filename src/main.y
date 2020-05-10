@@ -8,7 +8,7 @@ int yylex(void);
 
 %}
 
-%token '{' '}' '[' ']' ':' ',' '"' STR INT FLOAT '\n'
+%token '{' '}' '[' ']' ':' ',' '"' STR INT FLOAT
 
 %%
 
